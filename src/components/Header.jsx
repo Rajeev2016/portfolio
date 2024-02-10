@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link, NavLink } from "react-router-dom"
 
 const Header = () => {
     const [brandName, setBrandName] = useState("Rajeev Ranjan")
@@ -6,7 +7,7 @@ const Header = () => {
     const [menuLinks,setMenuLinks]=useState([
         {
             title:"Home",
-            link:"/home",
+            link:"/",
             id:1,
         },
         {
@@ -50,13 +51,13 @@ const Header = () => {
                 {
                     //for iteration all navbar value & dynamically call all these value
                     menuLinks.map((link)=>(
-                        <a key={link.id} href={link.link} className="hover:text-black">{link.title}</a>
+                        <NavLink key={link.id} to={link.link} className="hover:text-black">{link.title}</NavLink>
                     ))
                 }
             </div>
             <div>
                 {/* {buttons} */}
-                <a href={actionButton.link} className=" px-5 py-2 text-white bg-orange-500 hover:bg-white  hover:text-black rounded-xl">{actionButton.title}</a>
+                <Link to={actionButton.link} className=" px-5 py-2 text-white bg-orange-500 hover:bg-white  hover:text-black rounded-xl">{actionButton.title}</Link>
             </div>
         </div>
     </>

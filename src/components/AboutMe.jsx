@@ -1,7 +1,7 @@
 
 import { useState } from 'react'
 import bannerImage from '../assets/img-2.jpeg'
-const About = () => {
+const AboutMe = () => {
   const [data, setData]=useState({
     image:bannerImage,
     title:"Java Developer and Android Developer",
@@ -22,7 +22,7 @@ const About = () => {
             <img 
             src={bannerImage} 
             alt="Rajeev Ranjan" 
-            className='w-1/2 rounded-full'/>
+            className='w-1/2 rounded-full hover:p-2 hover:bg-black'/>
           </div>
           {/* text container */}
           <div className="w-full  border-black flex justify-center items-center">
@@ -39,4 +39,4 @@ const About = () => {
   )
 }
 
-export default About
+export default AboutMe
